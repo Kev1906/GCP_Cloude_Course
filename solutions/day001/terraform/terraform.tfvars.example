@@ -1,6 +1,0 @@
-# Example terraform.tfvars file
-# Copy this to terraform.tfvars and fill in your values
-
-organization_id    = "123456789012"
-billing_account_id = "012345-6789AB-CDEF01"
-domain             = "datamartx.com"

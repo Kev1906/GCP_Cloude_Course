@@ -195,76 +195,98 @@ solutions/dayXXX/
 
 1. **SIEMPRE guardar la teoría en `lessons/dayXXX.md`** - Esto es obligatorio para construir la base de conocimiento del alumno.
 
-2. **NUNCA simplifiques ejemplos** - Usa configuraciones reales de producción, no ejemplos toy.
+2. **Adapta el nivel al alumno** - Los primeros 20 días usa ejemplos simples y explicaciones detalladas. Después aumenta gradualmente la complejidad.
 
-3. **Cada lección debe apoyarse en las anteriores** - Construye conocimiento incrementalmente.
+3. **Días 1-20: SOLO consola web y gcloud CLI** - No uses Terraform hasta el día 21. El alumno necesita entender GCP manualmente primero.
 
-4. **Si detectas errores repetitivos, detente y corrígelos** - Como lo haría un Tech Lead.
+4. **Día 21+: Introducción gradual a Terraform** - Explica qué es, por qué usarlo, sintaxis básica. Asume cero conocimiento previo.
 
-5. **Los ejercicios deben ser tickets estilo Jira** - Con contexto de negocio real, no ejercicios abstractos.
+5. **Cada lección debe apoyarse en las anteriores** - Construye conocimiento incrementalmente.
 
-6. **No incluyas soluciones en los ejercicios** - El alumno debe resolver primero.
+6. **Si detectas errores repetitivos, detente y corrígelos** - Como lo haría un Tech Lead.
 
-7. **Evalúa como code review profesional** - Legibilidad, performance, seguridad, costos, escalabilidad.
+7. **Los ejercicios deben ser tickets estilo Jira** - Con contexto de negocio real, pero apropiados al nivel del alumno.
 
-8. **Puntúa sobre 10** - Explica cómo lo haría un Principal Engineer.
+8. **No incluyas soluciones en los ejercicios** - El alumno debe resolver primero.
 
-9. **Incluye siempre consideraciones de costos** - Un Cloud Architect que no piensa en costos no es profesional.
+9. **Evalúa como code review profesional** - Legibilidad, performance, seguridad, costos, escalabilidad (ajustado al nivel).
 
-10. **Incluye siempre consideraciones de seguridad** - Security by design, no como afterthought.
+10. **Puntúa sobre 10** - Explica cómo lo haría un Principal Engineer.
+
+11. **Incluye siempre consideraciones de costos** - Un Cloud Architect que no piensa en costos no es profesional.
+
+12. **Incluye siempre consideraciones de seguridad** - Security by design, no como afterthought.
+
+13. **Usa analogías** - Compara con conceptos que el alumno ya conoce (SQL, Python, sistemas de archivos).
+
+14. **Describe la consola paso a paso** - "Haz clic en X", "Navega a Y", "Verás un botón que dice Z".
 
 ### Para el Alumno
 
 1. El alumno ya tiene conocimientos de:
    - SQL avanzado (curso completado)
    - Python (pandas, airflow, dagster)
-   - Conceptos básicos de cloud
+   - Conceptos básicos de cloud (qué es cloud, IaaS/PaaS/SaaS)
 
-2. Nivel objetivo: **Senior Cloud Architect / Senior Data Engineer**
+2. **Nivel actual del alumno:**
+   - **GCP:** Principiante (conoce conceptos generales pero no ha usado GCP)
+   - **Terraform:** Cero experiencia
+   - **Consola GCP:** No la ha usado
 
-3. Se espera que el alumno:
+3. Nivel objetivo: **Senior Cloud Architect / Senior Data Engineer**
+
+4. **Enfoque pedagógico ajustado:**
+   - **Días 1-10:** Introducción gradual a GCP usando SOLO la consola web y gcloud CLI
+   - **Días 11-20:** Conceptos intermedios, aún sin Terraform
+   - **Día 21+:** Introducción a Terraform desde cero (qué es, por qué usarlo, sintaxis básica)
+   - Cada concepto nuevo debe explicarse como si fuera la primera vez que lo ve
+   - Incluir capturas de pantalla o descripciones detalladas de la consola
+   - Ejemplos paso a paso con explicaciones de cada clic
+   - Analogías con conceptos que ya conoce (SQL, Python, sistemas de archivos)
+
+5. Se espera que el alumno:
    - Resuelva los ejercicios ANTES de ver las soluciones
    - Haga code review de sus propias soluciones
    - Pregunte cuando no entienda un concepto
-   - Practique con la consola de GCP además de Terraform
+   - Practique con la consola de GCP además de los ejercicios
 
 ## Plan del Curso
 
 ### Fase 1: E-commerce (DataMartX) - Días 1-45
 
-**Días 1-15: GCP Fundamentals**
-- Day 1: GCP Architecture, Projects, Organizations, Folders
-- Day 2: IAM Fundamentals - Roles, Policies, Service Accounts
-- Day 3: Resource Hierarchy, Labels, Tags, Quotas
-- Day 4: VPC Networks, Subnets, Firewall Rules
-- Day 5: Cloud Storage - Classes, Lifecycle, ACLs, Uniform Access
-- Day 6: Cloud SQL - PostgreSQL/MySQL, HA, Read Replicas
-- Day 7: Cloud Spanner - Global distribution, transactions
-- Day 8: Compute Engine - VMs, Instance Groups, Templates
-- Day 9: Cloud Run - Serverless containers
-- Day 10: Cloud Functions - Event-driven compute
-- Day 11: Cloud Build - CI/CD pipelines
-- Day 12: Artifact Registry - Container/image management
-- Day 13: Cloud Deployment Manager vs Terraform
-- Day 14: gcloud CLI mastery
-- Day 15: Cost Management - Budgets, Alerts, Commitments
+**Días 1-15: GCP Fundamentals (Solo Consola Web + gcloud CLI)**
+- Day 1: Qué es GCP, crear cuenta, tour por la consola, primer proyecto
+- Day 2: Navegando la consola, regiones/zonas, habilitar APIs, billing básico
+- Day 3: Organization, Folders, Projects - conceptos y creación manual
+- Day 4: IAM básico - usuarios, roles predefinidos, dar permisos simples
+- Day 5: Cloud Storage - crear buckets, subir archivos, permisos básicos
+- Day 6: Compute Engine - crear tu primera VM, conectarse por SSH
+- Day 7: Cloud SQL - crear base de datos PostgreSQL, conectarse
+- Day 8: VPC básico - redes, subredes, firewall rules simples
+- Day 9: gcloud CLI - instalación, autenticación, comandos esenciales
+- Day 10: Cloud Storage avanzado - lifecycle, clases, uniform access
+- Day 11: Compute Engine intermedio - instance groups, templates
+- Day 12: Cloud Run - tu primer contenedor serverless
+- Day 13: Cloud Functions - funciones event-driven simples
+- Day 14: Cloud Build - CI/CD básico para deploy
+- Day 15: Cost Management - budgets, alerts, entender la factura
 
-**Días 16-30: Data Engineering Core**
-- Day 16: BigQuery Architecture - Storage, Compute, Slots
-- Day 17: BigQuery SQL - Advanced queries, UDFs
-- Day 18: BigQuery Performance - Partitioning, Clustering
-- Day 19: BigQuery ML - Feature engineering, models
-- Day 20: Dataflow Fundamentals - Apache Beam model
-- Day 21: Dataflow Pipelines - Transforms, IO, Windowing
-- Day 22: Dataflow Streaming - Pub/Sub integration
-- Day 23: Dataproc - Managed Spark/Hadoop
-- Day 24: Dataproc Optimization - Preemptible VMs, autoscaling
-- Day 25: Cloud Composer - Managed Airflow
-- Day 26: Composer DAGs - Operators, sensors, XCom
-- Day 27: Pub/Sub - Topics, subscriptions, push/pull
-- Day 28: Pub/Sub Advanced - Dead letter, ordering, exactly-once
-- Day 29: Data Fusion - Visual ETL/ELT
-- Day 30: Data Catalog - Metadata management
+**Días 16-30: Data Engineering Core + Intro Terraform**
+- Day 16: BigQuery desde cero - crear dataset, cargar datos, queries básicas
+- Day 17: BigQuery SQL avanzado - joins, window functions, UDFs
+- Day 18: BigQuery Performance - partitioning, clustering (con consola)
+- Day 19: Pub/Sub básico - topics, subscriptions, mensajes
+- Day 20: Cloud Composer (Airflow) - crear primer DAG simple
+- Day 21: Introducción a Terraform - qué es, por qué usarlo, instalación
+- Day 22: Terraform básico - sintaxis HCL, providers, resources
+- Day 23: Terraform con GCP - primer proyecto, crear bucket
+- Day 24: Terraform variables y outputs - parametrizar configuraciones
+- Day 25: Terraform state - qué es, remote backend en GCS
+- Day 26: Dataflow Fundamentals - Apache Beam model (con consola)
+- Day 27: Dataflow Pipelines - transforms, IO, windowing
+- Day 28: Dataproc - managed Spark/Hadoop básico
+- Day 29: Data Fusion - ETL visual sin código
+- Day 30: Data Catalog - metadata management
 
 **Días 31-45: Migration + Architecture**
 - Day 31: Migration Center - Assessment, planning
@@ -473,6 +495,8 @@ terraform init
 - **Curso:** Recién iniciado
 - **Día actual:** 0 (pendiente iniciar)
 - **Fase:** Pre-inicio
+- **Nivel del alumno:** Principiante en GCP, cero experiencia con Terraform
+- **Enfoque:** Introducción gradual desde la consola web hasta IaC
 - **Certificaciones objetivo:** Professional Cloud Architect + Professional Data Engineer
 
 ## Recursos Adicionales
