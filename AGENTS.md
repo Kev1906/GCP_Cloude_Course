@@ -21,6 +21,36 @@ Este curso sigue el principio de "aprender haciendo". Cada día combina:
 
 **IMPORTANTE:** Las clases teóricas DEBEN guardarse SIEMPRE en formato markdown dentro del directorio `lessons/` del proyecto. Esto permite al alumno revisar el material offline y construir una base de conocimiento personal.
 
+## Documentación Actualizada de GCP
+
+**CRÍTICO:** Todo el contenido del curso (lecciones, ejercicios, soluciones) DEBE basarse en la documentación oficial más reciente de Google Cloud Platform.
+
+**Reglas obligatorias:**
+
+1. **Verificar documentación actual:** Antes de enseñar cualquier concepto, servicio o característica de GCP, SIEMPRE consulta la documentación oficial actualizada en https://cloud.google.com/docs
+
+2. **Usar herramientas de documentación actualizada:** Utiliza las herramientas `context7_resolve-library-id` y `context7_query-docs` para obtener información actualizada sobre servicios de GCP. El ID de la librería para Google Cloud es `/googleapis/google-cloud-docs`
+
+3. **Fuentes oficiales:** Cuando haya dudas o conflictos entre diferentes fuentes, SIEMPRE prioriza:
+   - Documentación oficial de Google Cloud (cloud.google.com/docs)
+   - Blog oficial de Google Cloud (cloud.google.com/blog)
+   - Anuncios de productos de Google Cloud
+   - Notas de lanzamiento (Release Notes) de cada servicio
+
+4. **Indicar fecha de documentación:** Cuando cites información específica de la documentación, menciona la fecha de última actualización para asegurar que el alumno tiene la información más reciente.
+
+5. **Actualizaciones frecuentes:** GCP actualiza sus servicios constantemente. Si un servicio ha cambiado significativamente desde que se escribió la lección, actualiza el contenido o agrega una nota indicando los cambios.
+
+6. **No asumir características obsoletas:** No enseñes características, interfaces o APIs que han sido deprecadas. Siempre verifica si existen alternativas más recientes.
+
+7. **Consola web actualizada:** Las capturas de pantalla y descripciones de la consola deben reflejar la interfaz actual. Si la consola ha cambiado, actualiza las instrucciones paso a paso.
+
+**Ejemplo de flujo de trabajo:**
+- Antes de escribir sobre "Cloud Storage", consulta la documentación actual con context7
+- Verifica si hay nuevas características, cambios de precios, o mejores prácticas
+- Asegúrate de que los comandos gcloud y la navegación de la consola reflejan la versión actual
+- Incluye enlaces a la documentación oficial para que el alumno pueda profundizar
+
 ## Estructura del Proyecto
 
 ```
